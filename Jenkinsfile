@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('clone'){
             steps{
-                git url: 'https://github.com/Jagdish2806/Backend-Bicycle.git', branch: 'main'
+                git url: 'https://github.com/Jagdish2806/Frontent-Bicycle.git', branch: 'main'
             }
         }
             stage("Install Dependencies"){
