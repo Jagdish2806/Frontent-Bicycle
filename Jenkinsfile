@@ -11,18 +11,18 @@ pipeline{
         }
             stage("Install Dependencies"){
                 steps{
-                    sh 'npm i'
+                    sh 'docker build -t frontend .'
                 }
             }
-            stage('build'){
-                steps{
-                   sh 'npm run build' 
-                }
-            }
+       //     stage('build'){
+         //       steps{
+           //        sh 'npm run build' 
+             //   }
+            //}
           
             stage('run'){
                 steps{
-                    sh 'pm2 start serve --name Jagdish -- -S /var/lib/jenkins/workspace/bicycle/dist/bicycle -l 4200'
+                    sh 'docker run -p 4200:4200 frontend'
                 }
             }
             }
