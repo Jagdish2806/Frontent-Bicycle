@@ -6,5 +6,4 @@ COPY . .
 
 RUN npm i
 
-CMD ["npm","start","--","--host","0.0.0.0","--allowed-hosts"]
-
+CMD ["npm","start","--","--host","0.0.0.0","--disable-host-check"]
