@@ -22,7 +22,7 @@ pipeline{
           
             stage('run'){
                 steps{
-                    sh 'docker run -p 4200:4200 frontend'
+                    sh 'docker run -d -p 4200:4200 frontend'
                 }
             }
             }
